@@ -1,12 +1,28 @@
- $(window).scroll(function () {
-     if ($(this).scrollTop() > 700) {
-         $(".navbar-default").addClass("navbar-fixed-top ");
 
-     } else {
-         $(".navbar-default").removeClass("navbar-fixed-top");
-     }
- })
  $("document").ready(function () {
+  
+  
+      var offset = $('nav').offset().top;
+
+
+    $(window).scroll(function () {
+        var scrollValue = $(window).scrollTop();
+
+        $('nav').wrap('<div class="nav-placeholder"> </div>');
+        $(".nav-placeholder").height($('nav').outerHeight());
+
+        if (scrollValue >= offset) {
+            $("nav").addClass("navAnimate");
+
+        } else {
+            $("nav").removeClass("navAnimate");
+            //plase take navAnimate css class for plug in
+        }
+    })
+
+
+  
+  
      $(".box").animate({
          "height": "350"
      }, 1500);
