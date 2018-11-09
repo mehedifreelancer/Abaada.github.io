@@ -441,3 +441,16 @@ iframe {
     max-width: 100%;
 
 }
+
+//smothh sticky nav
+
+.navAnimate {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1
+}
+
+.nav-placeholder {
+    margin: 0 0 40px 0;
+}
